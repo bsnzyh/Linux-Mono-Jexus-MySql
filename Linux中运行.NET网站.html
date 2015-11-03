@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://jhonge.net/Home/Single2/748 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>惊鸿哥的港湾</title>
+    <link rel="icon" href="http://jhonge.net/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://jhonge.net/Contents/Images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="Linux.NET,Mono,Linux,.NET">
+
+    <link href="http://jhonge.net/Contents/CSS/pintuer/pintuer.css" rel="stylesheet">
+    <link href="http://jhonge.net/Contents/CSS/style-min.css" rel="stylesheet">
+    
+    <link href="http://jhonge.net/CodeHighlighter/CodeHighlighter-min.css" rel="stylesheet">
+
+</head>
+<body class="laycode">
+    <header class="layout" id="header">
+        <div class="container">
+            <a href="http://jhonge.net/" class="logo">
+                惊鸿哥的港湾
+            </a>
+        </div>
+    </header>
+<div class="container" style="margin-top:10px;">
+        <div class="line">
+            
+<div class="xm9">
+    <div id="Posts">
+        <article class="blog-main">
+            <div class="blog-title"><a>Linux.NET学习手记（1）</a></div>
+            <div class="blog-meta">
+                <span>
+                    <i class="icon-calendar"></i>2014/9/2
+                </span>
+                <a><span><i class="icon-folder-open"></i>Linux.NET学习手记</span></a>
+            </div>
+            <section class="blog-content">
+                
+
+
+
+
+<p><span style="font-family: 宋体; font-size: 12pt;">Linux下面跑.NET程序，听起来有点疯狂，不过又是那么的有前途。Linux作为服务器，它的优势是不容置疑的，可以说类Unix系统（Linux、Unix……）天生就是适合做为服务器的操作系统，它的稳定性、它的高效、它的低成本，这都是Windows所不能媲美的。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;"><span style="color: #403226; text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal; font-style: normal; font-variant: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; font-size-adjust: none; font-stretch: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;">不说太多了，我们直接进入我们讨论学习的话题吧,这里推荐几个Linux.net的学习地点：</span><a style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 0px; padding: 0px; color: #5a5a5a; text-transform: none; text-indent: 0px; letter-spacing: normal; text-decoration: underline; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;" href="http://www.imono.cc/" target="_blank">mono中国</a><span style="color: #403226; text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal; font-style: normal; font-variant: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; font-size-adjust: none; font-stretch: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;">，</span><a style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 0px; padding: 0px; color: #5a5a5a; text-transform: none; text-indent: 0px; letter-spacing: normal; text-decoration: underline; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;" href="http://www.linuxdot.net/" target="_blank">Linux DotNet大本营</a><span style="color: #403226; text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal; font-style: normal; font-variant: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; font-size-adjust: none; font-stretch: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;">，</span><a style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 0px; padding: 0px; color: #5a5a5a; text-transform: none; text-indent: 0px; letter-spacing: normal; text-decoration: underline; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;" href="http://blog.csdn.net/jexus" target="_blank">jexus Web Server 技术博客</a><span style="color: #403226; text-transform: none; line-height: 24px; text-indent: 0px; letter-spacing: normal; font-style: normal; font-variant: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; font-size-adjust: none; font-stretch: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;">。</span></span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">同时，这里也推荐张善友先生的博客，那里有很多关于Linux.NET的文章。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">本回合，我们主要讨论学习：</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">1、什么是mono</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">2、为什么要用mono</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">3、如何在Linux中部署一个.NET的运行环境</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">4、部署时我们需要注意什么，以及对一些关键步骤的解析</span></p>
+<hr>
+<p><br><span style="font-family: 宋体; font-size: 12pt;">1、什么是mono</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">关于什么是mono，我想无论我怎么说，应该都不会比官方的解释，或者是百科更加详细；我这里就简单说吧，Java之所以能够跨平台运作，是依赖与Java的虚拟机JVM，而.NET之所以只能够在Windows中跑，同样是因为.NET运行需要依赖与Framework的Runtime（公共运行时），那如果能够在Linux同提供适合于.NET运作的环境（包括CLR等），那.NET也可以在Linux中跑起来了，这就是mono了。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">&nbsp;</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">2、为什么要使用mono</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">为什么使用mono，原因有很多，不过归结起来，我个人认为以下这是最重要的：</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">（1）、作为服务器来说，如果能够实现一模一样的功能的，还是主推Linux。为什么呢？我列举了几个实例：</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">　　首先，如果服务器需要打补丁，作为Windows服务器，你打完补丁之后必须重启，这一定程度上会对你的业务造成一定程度上的影响。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">　　其次，我们经常会听到Windows会中毒，特别是作为Web服务器和邮件服务器，我们不知道用户会给我们上传一些什么东西上来，相反，我们却很少会听到Linux中毒这么一个说法；这是由于Linux存在着太多的发行版本，不同版本之间编译后的软件无法相互调用，因此，如果能够感染A版本的Linux病毒无法感染B版本的Linux，这在很大程度上削减了病毒的危害性。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">　　再者，作为服务器，我们会尽量希望自己的系统更加的轻量化，更加的高效，和更加的稳定；Linux对于我们的要求，都提供了，我们可以定制的安装软件和服务，对于一些不必要的服务我们可以直接不安装（注意，是直接不安装，而不是安装之后再关闭），相反，如果采用Windows的话，一上来就啪嗒啪嗒的安装一大堆软件和服务，无论你用不用得上，先给你安装；也许这个可以让您的服务器充当更多的角色，但是我们更加希望服务器能够做到单一高效而不是面面俱到。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">　　最后，Linux运行对于硬件的要求比较低，这也是由于Linux抛弃桌面环境（作为服务器，我们不应该安装XWindow）和没有太多不必要的服务所决定的，而Windows则显得矜贵多了，硬件配置低一点还不一定能够正常运作。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">（2）、从成本考虑：</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">　　一般部署在Windows中的.NET程序都是采用 “Windows Server版本 + IIS + &nbsp;MS SQLServer” 这确实是.NET的黄金组合，但是，值得遗憾的是，它们都是要收费的，系统要收费，数据库要收费；作为大企业来说，上千上万台服务器，如果都采用这种模式的话，那将是一笔巨额的开销；对于小公司，资金对于它们来说本就是一个难题，能省下来的基本上都希望省下来，如果放着一个能够达到相同功能而且免费的模式不用而采取这种付费模式，那太说不过去了。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">　　而如果我们采用mono，把.NEt部署在Linux中，我们可以采用以下的组合：“Linux + mono + jexus（Apache/nginx +&nbsp;<span style="margin: 0px; padding: 0px;">XSP2</span>）+ MySql(<span style="margin: 0px; padding: 0px;">PostgerSQL或其他免费数据库</span>)”，所有的这些无论是否开源（jexus不开源）都是免费的。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">　　作为老板，你会选择哪种呢？&nbsp;&nbsp;</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">&nbsp;</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">3、mono环境的部署</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">介绍再多也不过是纸上谈兵，实战才是硬道理。工欲善其事必先利其器，要实操，还必须先要有这个环境，下面进入本回合的重点环节，Mono环境的配置。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">网上也有大量关于mono环境搭建的帖子，基本上都是搭配以下这两种类型的mono环境：以免费不开源jexus作为服务器软件的mono环境 和 以Apache（或nginx）作为服务器软件的mono环境，具体选择哪款环境读者可以自由选择。选择前者的，可以参考张善友先生的<a style="margin: 0px; padding: 0px; color: #5a5a5a; text-decoration: underline;" href="http://www.cnblogs.com/shanyou/archive/2012/01/07/2315982.html" target="_blank">《32和64位的CentOS 6.0下 安装 Mono 2.10.8 和Jexus 5.0》</a>；而选择后者的读者则可以参考<a style="margin: 0px; padding: 0px; color: #5a5a5a; text-decoration: underline;" href="http://www.cnblogs.com/aquilahkj/archive/2011/11/03/2234380.html" target="_blank">《CentOS 6.0 安装 MONO 2.10.8》</a>。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">这里我们就选择前者[选择的原因我打算放到下一回合再来说明]。</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">版本选择，均选择当前所能下载的最新版本（需要下载的可以链接下载）：</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">操作系统：<a style="margin: 0px; padding: 0px; color: #5a5a5a; text-decoration: underline;" href="http://mirrors.grandcloud.cn/centos/6.4/isos/x86_64/CentOS-6.4-x86_64-bin-DVD1.iso" target="_blank">CentOS-6.4-x86_64</a></span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">libgdiplus：<a style="margin: 0px; padding: 0px; color: #5a5a5a; text-decoration: underline;" href="http://download.mono-project.com/sources/libgdiplus/libgdiplus-2.10.tar.bz2" target="_blank">libgdiplus-2.10.9</a></span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">mono：<a style="margin: 0px; padding: 0px; color: #5a5a5a; text-decoration: underline;" href="http://download.mono-project.com/sources/mono/mono-3.0.7.tar.bz2" target="_blank">mono-3.0.7</a></span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;">jexus：<a style="margin: 0px; padding: 0px; color: #5a5a5a; text-decoration: underline;" href="http://www.linuxdot.net/down/jexus-5.2.3.tar.gz" target="_blank">jexus-5.2.3</a>（这里最新版其实是jexus-5.3.0 beta3，不过基于稳定性，我选择了最新的稳定发行版）</span></p>
+<p style="font: 14px/24px verdana, &#39;ms song&#39;, 宋体, Arial, 微软雅黑, Helvetica, sans-serif; margin: 10px auto; padding: 0px; color: #403226; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="font-family: 宋体; font-size: 12pt;"><img src="./Linux中运行.NET网站_files/140902232208816.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">首先，先用Hyper-V虚拟机安装好系统，各位读者也可以选择用VM机或者其他虚拟机来安装操作系统，问题都不大。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">装好Linux系统之后，我们正式的来搭建mono环境，我们把需要的源码包都上传到Linux中</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;"><img src="./Linux中运行.NET网站_files/140902232234485.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">首先，先用Hyper-V虚拟机安装好系统，各位读者也可以选择用VM机或者其他虚拟机来安装操作系统，问题都不大。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">装好Linux系统之后，我们正式的来搭建mono环境，我们把需要的源码包都上传到Linux中</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（1）、更新系统 yum update&nbsp;&nbsp; （这里我就不更新了，因为都是最新版的东西了）</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（2）、通过yum安装编译mono所需要的库</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">&nbsp;yum -y install gcc gcc-c++ bison pkgconfig glib2-devel gettext make libpng-devel libjpeg-devel libtiff-devel libexif-devel giflib-devel libX11-devel freetype-devel fontconfig-devel&nbsp; cairo-devel</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（3）、编译安装Libgdiplus</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">tar jxf libgdiplus-2.10.9.tar.bz2</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">cd libgdiplus-2.10.9</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">./configure --prefix=/usr/local/mono/</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">make &amp;&amp; make install</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">echo "/usr/local/mono/lib" &gt; /etc/ld.so.conf.d/mono.conf</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">ldconfig</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（4）、安装mono</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">由于mono比较大，因此解压和编译安装都需要比较长的时间</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">tar jxf mono-3.0.7.tar.bz2</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">cd mono-3.0.7</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">./configure --prefix=/usr/local/mono/</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">make &nbsp;（如果下载的是最新版本，make过程中出现“mcs not found”的错误，执行&nbsp;make get-monolite-latest 后继续make）</span>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 12pt;">make install</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">ldconfig</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">echo&nbsp; PATH=/usr/local/mono/bin:$PATH&gt;&gt;~/.bash_profile</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">source ~/.bash_profile</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">执行&nbsp; “ mono -V ”如果可以看到mono的版本信息，则表明编译安装成功</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;"><img src="./Linux中运行.NET网站_files/140902232404661.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（5）、安装jexus</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">安装jexus比较简单，jexus安装分为全新安装和升级安装两种，由于我们这里是全新安装，所以只讲全新安装部分，升级安装可以阅读jexus中自带的readme文档，里面有详细介绍。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">tar xzf jexus-5.2.3.tar.gz</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">mv jexus-5.2.3 /usr/local/jexus</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">cd /usr/local/jexus/</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">./jws regsvr &nbsp; （这里注意，如果采用最新版本的jexus【也建议去jexus官网下最新版本】,则只需直接执行./install /usr/local/jexus 即可</span>）</p>
+<p><span style="font-family: 宋体; font-size: 12pt;">ln -s /usr/local/mono/ /opt/mono</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">至此，jexus就安装完毕了</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">输入操作 “./jws.start”启动服务器，输入网址XXXX/info，得到以下画面，表明全部安装成功。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;"><img src="./Linux中运行.NET网站_files/140902232445982.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">4、部署需要注意的事项与解释</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">上回合我们只是单纯的部署讲怎么部署mono，并没有对部署mono中每一步的作用做出解释，很多读者或许部署完了还不明白到底怎么回事，因此这回合我们就上回合的操作作出解释，并了解重点需要注意哪些事项。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（1）、部署 libgdiplus 时，执行最后一步是什么意思？</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">　　上回合中，我们部署 libgdiplus 时执行了一步 “echo "/usr/local/mono/lib" &gt; /etc/ld.so.conf.d/mono.conf”，这一步的作用其实到了部署mono时，执行 ldconfig 才正式的发挥作用。由于我们部署libgdiplus 和mono没有部署到系统默认的/usr 中，因此系统是不会默认的到我们部署mono的文件夹中搜寻和读取里面的动态库文件，这时，我们需要在/etc/ld.so.conf.d/文件夹中，手动的添加mono动态库文件夹的地址，再执行 ldconfig 来让系统能够找到我们的动态库文件。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（2）、部署mono后，执行 ldconfig 很重要</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">编译部署mono之后，我们会得到大量需要加载的动态库文件，而这些动态库文件，我们再下一步的时候就需要用到，因此需要让系统重新加载。（如果没有重新加载，有可能在部署jexus的时候会出现各种各样的问题）</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（3）、部署mono之后，需要把bin目录的路径加入到环境变量PATH中</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">原理跟安装完jdk之后，需要在环境变量注册是一样的。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（4）、部署jexus需要执行注册</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">部署jexus的过程相当简单，只需要解压，然后把文件夹拷贝到我们想要它存放的目录就可以了，不过在此之后，我们需要注册全局程序集（./jws.regsvr），这个很重要</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">（5）、为什么注册完jexus之后需要添加一个软链接</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">事实上，本来这个软链接是不会写上来的，因为之前部署mono时，注册完jexus了，服务就可以正常的跑起来了。但是这次不同，注册完之后，“./jws.start”之后，服务并没有起来，执行"./jws.stop"系统报了个notfoundXXX（找不到XXX）。于是用vi随便打开了其中的一个脚本，注意到了如下的代码：</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;"><img src="./Linux中运行.NET网站_files/140902232530566.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">很明显，jws脚本哪里写有了寻找mono的搜寻路径，而恰好，我们部署的mono都不在这几个路径中，因此，jexus找不到想要的bin目录下的文件，所以就服务起不来或者报了个notfound。这时，我们只要在/opt/mono/ 中（当然Path中的任意一个都行，或者你也可以自己手动的一个一个脚本文件添加上mono的目录路径）添加一个软链接，把它链接到我们部署mono的目录下，jexus就能够顺利的找到想要的文件。</span></p>
+<hr>
+<p><span style="font-family: 宋体; font-size: 12pt;">好了，要讲的暂时就这么多，我们的Linux.NET环境就基本搭建起来了。各位读者此刻时候有一种跃跃欲试的感觉，如果有，欢迎您马上行动，纸上得来终觉浅绝知此事必躬行。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;">此外：由于本人对Linux.NET接触时间并不太久，手上也没有比较有效的资料，因此很多时候都是采取摸着石头过河的方式来学习研究，如果在讨论学习的过程中有任何错漏的，欢迎各位读者能够指正出来，同时，如果各位读者有任何的意见或者建议，也欢迎大家提出。</span></p>
+<p><span style="font-family: 宋体; font-size: 12pt;"><a href="http://jhonge.net/Home/Single/6617682">下一回合</a>，我们将讨论学习：jexus作为Linux下基于mono的.NET服务器，其优势在哪？jexus的配置与特色功能，还有其中的一些注意事项与小技巧。</span></p>
+
+
+            </section>
+            <div class="blog-tags">
+
+                <span>
+                    <i class="icon-tags"></i>
+                        &nbsp;&nbsp;[ Linux.NET ]
+                        &nbsp;&nbsp;[ Mono ]
+                        &nbsp;&nbsp;[ Linux ]
+                        &nbsp;&nbsp;[ .NET ]
+                </span>
+
+            </div>
+        </article>
+ <div style="padding:5px 0 5px 5px;background-color:#fcf8e3;color:#8a6d3b;border-color:#faebcc;">
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="./Linux中运行.NET网站_files/88x31.png"></a>
+            本作品由<a xmlns:cc="http://creativecommons.org/ns#" href="http://jhonge.net/" property="cc:attributionName" rel="cc:attributionURL">小蝶惊鸿</a>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可，转载时请保留本文署名及链接。
+        </div>
+    </div>
+</div>
+
+            
+<aside class="xm3 sidebar">
+    <div class="panel">
+        <div class="panel-head icon-user">
+            <strong>关于博主</strong>
+        </div>
+        <div class="panel-body text-center">
+            <img onclick="location.href = &#39;/Home/About&#39;" src="./Linux中运行.NET网站_files/images-xzicon-tx005x200.jpg" width="96" class="img-border radius-circle" style="cursor:pointer;" title="别点，啊，好害羞~~(&gt;_&lt;) ">
+            <h3><a href="http://weibo.com/317166684" title="关注我的微博" target="_blank">小蝶惊鸿</a></h3>
+            <p class="text-left text-big" style="text-align:center;">有时写写博客，大部分时间不知道在干嘛</p>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-head icon-folder-open">
+            <strong>博文分类</strong>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                    <li style="cursor:pointer;">
+                        <a title="技术探讨" href="http://jhonge.net/Home/Index/1/204">技术探讨 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a title="Linux.NET学习手记" href="http://jhonge.net/Home/Index/1/238">Linux.NET学习手记 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a title="LVS原理与使用" href="http://jhonge.net/Home/Index/1/272">LVS原理与使用 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a title="狙击Sphinx/Coreseek全文索引" href="http://jhonge.net/Home/Index/1/306">狙击Sphinx/Coreseek全文索引 </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-head icon-sort-numeric-asc">
+            <strong>最新文章</strong>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2346" title="罪魁祸首！Linux自动清理临时文件玩死.NET程序">罪魁祸首！Linux自动清理临时文件玩死.NET程序</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2312" title="狙击Sphinx/Coreseek全文索引——配置文件详细解析">狙击Sphinx/Coreseek全文索引——配置文件详细解析</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2278" title="狙击Sphinx/Coreseek全文索引（4）">狙击Sphinx/Coreseek全文索引（4）</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2244" title="狙击Sphinx/Coreseek全文索引（3）">狙击Sphinx/Coreseek全文索引（3）</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2210" title="狙击Sphinx/Coreseek全文索引（2）">狙击Sphinx/Coreseek全文索引（2）</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2176" title="狙击Sphinx/Coreseek全文索引（1）">狙击Sphinx/Coreseek全文索引（1）</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2142" title="OwinHost再添新成员：TinyFox">OwinHost再添新成员：TinyFox</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2108" title="LVS原理与使用（5）">LVS原理与使用（5）</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2074" title="LVS原理与使用（4）">LVS原理与使用（4）</a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://jhonge.net/Home/Single2/2040" title="LVS原理与使用（3）">LVS原理与使用（3）</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-head icon-link">
+            <strong>友情链接</strong>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                    <li style="cursor:pointer;">
+                        <a href="http://www.cnblogs.com/xiaodiejinghong/" title="你要去哪里？" target="_blank">我的博客园 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://linuxdot.net/" title="你要去哪里？" target="_blank">Linux.NET大本营 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://www.so-love.com/" title="你要去哪里？" target="_blank">至爱分享 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://www.asquestion.com/" title="你要去哪里？" target="_blank">Questions </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://beginor.github.io/" title="你要去哪里？" target="_blank">张志敏的技术专栏 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="https://jexus.codeplex.com/" title="你要去哪里？" target="_blank">Jexus英文站 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://www.cnblogs.com/shanyou" title="你要去哪里？" target="_blank">张善友的园子 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://yimingzhi.net/" title="你要去哪里？" target="_blank">衣明志的技术博客 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://blog.zhaojie.me/" title="你要去哪里？" target="_blank">老赵点滴 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://www.olexe.cn/" title="你要去哪里？" target="_blank">小白的站子 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://www.pwmis.com/sqlmap" title="你要去哪里？" target="_blank">PDF.NET SOD官网 </a>
+                    </li>
+                    <li style="cursor:pointer;">
+                        <a href="http://www.seaning.com/" title="你要去哪里？" target="_blank">隐的后花园 </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="copyright">
+            <a style="outline:none;" href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备14059150号</a>
+        </div>
+    </footer>
+    <div class="go-top" title="登月火箭">
+        <a href="javascript:;" class="win-backtop"><i class="icon-arrow-circle-up"></i></a>
+    </div>
+    <script src="./Linux中运行.NET网站_files/jquery-1.10.2.min.js"></script>
+    <script src="./Linux中运行.NET网站_files/pintuer.js"></script>
+    
+    <script src="./Linux中运行.NET网站_files/codeHighlight-min.js"></script>
+    <script type="text/javascript">
+        code_highlight.init();
+    </script>
+
+
+        <div style="display:none">
+            <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F17c061ccf86b15d332840cd6fb010c49' type='text/javascript'%3E%3C/script%3E"));
+            </script><script src="./Linux中运行.NET网站_files/h.js" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=17c061ccf86b15d332840cd6fb010c49" target="_blank"><img border="0" src="./Linux中运行.NET网站_files/21.gif" width="20" height="20"></a>
+        </div>
+
+
+</body></html>
